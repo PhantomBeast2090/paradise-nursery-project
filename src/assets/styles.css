@@ -1,0 +1,252 @@
+/* General Body & Reset Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+.page-content {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Landing Page --- */
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&q=80') no-repeat center center/cover;
+}
+
+.landing-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* --- Buttons --- */
+.btn {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #264653;
+}
+
+.btn-primary {
+  background-color: #e76f51;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+  background-color: #f4a261;
+}
+
+/* --- Header --- */
+.header {
+  background-color: #fff;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #264653;
+  text-decoration: none;
+}
+
+.header .nav-link {
+  color: #264653;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.cart-icon-link {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #e76f51;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+
+/* --- Product Listing Page --- */
+.category-section h3 {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #264653;
+  border-bottom: 2px solid #e9c46a;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  color: #e76f51;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* --- Shopping Cart Page --- */
+.cart-page h2 {
+  margin-bottom: 2rem;
+}
+
+.cart-summary {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+}
+.cart-summary h3 {
+  margin-top: 0;
+  color: #264653;
+}
+.cart-summary p {
+  margin: 0.5rem 0;
+}
+
+.cart-item {
+  display: flex;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  align-items: center;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  text-align: left;
+}
+.cart-item-details h3 {
+  margin: 0 0 0.5rem;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+.cart-item-quantity button {
+  padding: 2px 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #f4f4f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart-item-delete {
+  background: none;
+  border: 1px solid #e76f51;
+  color: #e76f51;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.cart-item-delete:hover {
+  background: #e76f51;
+  color: #fff;
+}
+
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
